@@ -1,0 +1,19 @@
+.screen {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 99;
+    /*backdrop-filter: blur(1px);*/
+  }
+  .screen_track {
+    height: 5px;
+    background-color: violet;
+  }
+  .screen_track-bit {
+    height: 5px;
+    width: 5px;
+    background-color: blue;
+    position: relative;
+    animation: time 2s infinite;
+  }

@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from 'react'
+import './App.css'
+import axios from 'axios'
 
-function App() {
+
+
+const App = () => {
+  useEffect(() => {
+    console.log('useeffect in use!')
+  
+    axios
+      .get('https://s3fs.github.io/api/db.json')
+      .then(r => console.log('r', r.data[0]))
+  }, [])
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <>
+      <header>
+        <h1>This is my page.</h1>
+        
+        <nav><span>About me</span><span>My projects</span><span>Contact me</span></nav>
       </header>
-    </div>
-  );
+
+      <section>
+
+      </section>
+    </>
+  )
 }
 
 export default App;
