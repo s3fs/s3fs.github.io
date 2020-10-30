@@ -1,38 +1,115 @@
-.App {
-  text-align: center;
-}
+/*@import url('https://fonts.googleapis.com/css2?family=Trispace&display=swap');*/
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+  font-family: monospace, sans-serif;
+  font-size: 1.25rem;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.container {
+  position: relative;
+  max-width: 35rem;
 }
-
-@keyframes App-logo-spin {
+p {
+  word-wrap: break-word;
+}
+nav, footer {
+  background-color: lightblue;
+  border-radius: 1rem;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0;
+}
+footer {
+  padding: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+.nav_button {
+  font-family: monospace, sans-serif;
+  background-color: white;
+  border: none;
+  font-size: 1.2rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 1.2rem;
+  box-shadow: 0 0 0.5rem lightblue;
+  cursor: pointer;
+}
+.nav_button:hover {
+  animation: buttanim 0.1s forwards;
+}
+.trunk_title {
+  margin: 0.5rem 0;
+}
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0.5rem rgb(56, 186, 230);
+}
+footer {
+  margin: 1rem 0;
+}
+ul {
+  margin-top: 0.5rem;
+  padding-left: 0;
+  list-style-type: none;
+}
+li:nth-child(odd) {
+  background-color: rgb(229, 243, 248);
+}
+.note {
+  display: flex;
+  justify-content: space-between;
+}
+.note_span {
+  position: relative;
+  margin-left: 0.5rem;
+}
+.note_descr {
+  font-size: 0.8rem;
+  color: gray;
+}
+.note_name {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.span_wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.contact_div {
+  display: flex;
+  flex-wrap: wrap;
+  word-wrap: break-word;
+}
+.loading {
+  font-weight: bold;
+  animation: loadanim 1s infinite;
+}
+.title_a {
+  display: flex;
+  flex-wrap: wrap;
+}
+@keyframes buttanim {
   from {
-    transform: rotate(0deg);
+    font-size: 1rem;
   }
   to {
-    transform: rotate(360deg);
+    font-size: 0.95rem;
+  }
+}
+@keyframes loadanim {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }

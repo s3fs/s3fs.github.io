@@ -17,3 +17,14 @@
     position: relative;
     animation: time 2s infinite;
   }
+  @keyframes time {
+    0% {
+      left: 0vw;
+    }
+    50% {
+      left: 95vw;
+    }
+    100% {
+      left: 0vw;
+    }
+  }

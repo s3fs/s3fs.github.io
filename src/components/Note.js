@@ -1,15 +1,16 @@
 import React from 'react'
-import '../App.css'
 
-const Note = ({ content, clearEntry }) => {
+const Note = ({ content }) => {
     return (
         <li className='note'>
-            <div className="word_wrapper">
-                <span className="note_span">{content.de}</span> 
-                <span className="note_span">{content.en}</span> 
-                <span className="note_span">{content.ru}</span> 
+            <div className="span_wrapper">
+                <span className='note_name'>{content.name}</span>
+                <span className='note_descr'>{content.description}</span>
             </div>
-            <button id={content.id} onClick={clearEntry}>&times;</button>
+            <div className="link_wrapper">
+                <a className="note_span" href={content.html_url}>&gt;Repo</a> 
+                <a className='note_span' href={`https://s3fs.github.io/${content.name}`}>&gt;Build</a>
+            </div>
         </li>
     )
 }
