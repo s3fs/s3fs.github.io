@@ -1,3 +1,7 @@
+//TODO: add dependabot to watch deps
+//write tests
+//styling
+
 import React, { useState, useEffect } from 'react'
 import './App.css'
 import axios from 'axios'
