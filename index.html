@@ -5,93 +5,29 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <style>
-    body, html {
-      height: 100%;
-      margin: 0;
-    }
-
-    body {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      box-sizing: border-box;
-    }
-
-    .bozo {
-      height: 5em;
-      width: 10em;
-      font-family: 'Roboto';
-      background-color: #c74f4f;
-      border-radius: 0.2em;
-      padding: 0.5em;
-    }
-
-    .tobase {
-      animation: tobase 2s forwards;
-    }
-
-    @keyframes tobase {
-      to {
-        transform: rotate(0deg);
-      }
-    }
-
-    @media screen and (max-width: 500px) {
-      :root {
-        font-size: 0.8em;
-      }
-    }
-  </style>
+  <link rel='stylesheet' href='./style.css' />
 </head>
-<body class="cont">
-  <h1 class='bozo'>Hello world!</h1>
+<body class='cont'>
+  <button class='change-card'>&#8631;</button>
+  <h1 class='card card-active'>
+    <div class='logo'>WEB DEVELOPMENT</div>
+    <img class='paywave' src='./vpw.png' />
+    <div class='card_bottom-container'>
+      <div>NIKOLAI PAVLOV</div>
+      <img class='card_visa-logo' src='./visa.png' />
+    </div>
+  </h1>
+  <h1 class='card card-inactive'>
+    <div class='contacts'>
+      <a href="https://t.me/felipemaersk">@felipemaersk</a>
+      <a href="https://github.com/s3fs">GitHub</a>
+      <a href="mailto:northfacebodybags@yahoo.com">northfacebodybags@yahoo.com</a>
+    </div>
+    <div class='projects'>
+      <div>Some of my projects:</div>
+      <div class='repo-list'>Loading...</div>
+    </div>
+  </h1>
 </body>
-<script>
-  const bozo = document.querySelector('.bozo')
-  const cont = document.querySelector('.cont')
-
-  let [height, width] = [window.innerHeight, window.innerWidth]
-
-  const scaleValue = (value, from, to) => {
-	  const scale = (to[1] - to[0]) / (from[1] - from[0]);
-	  const capped = Math.min(from[1], Math.max(from[0], value)) - from[0];
-	  return ~~(capped * scale + to[0]);
-  }
-
-  const move = (x, y) => {
-    bozo.innerHTML = `${x} ${y}`
-    bozo.style.transform = `rotateY(${scaleValue(x, [0, width], [-40, 40])}deg) rotateX(${scaleValue(y, [0, height], [40, -40])}deg)`
-    cont.style.perspective = `500px`
-  }
-
-  window.addEventListener('resize', () => {
-    [height, width] = [window.innerHeight, window.innerWidth]
-  })
-
-  window.addEventListener('touchmove', (ev) => {
-    move(ev.touches[0].clientX, ev.touches[0].clientY)
-  })
-
-  window.addEventListener('touchend', () => {
-    bozo.classList.add('tobase')
-  })
-
-  window.addEventListener('touchstart', () => {
-    bozo.classList.remove('tobase')
-  })
-
-  document.addEventListener('mouseleave', () => {
-    bozo.classList.add('tobase')
-  })
-
-  document.addEventListener('mouseenter', () => {
-    bozo.classList.remove('tobase')
-  })
-
-  document.addEventListener('mousemove', (ev) => {
-    move(ev.clientX, ev.clientY)
-  })
-</script>
+<script src='./srcipt.js'></script>
 </html>
