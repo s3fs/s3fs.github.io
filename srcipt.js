@@ -1,3 +1,6 @@
+let isFlipped = false
+let reposAreFetched = false
+
 const fetchRepos = async () => {
   const res = await fetch('https://api.github.com/users/s3fs/repos')
   const jsonified = await res.json()
@@ -10,9 +13,6 @@ const logo = document.querySelector('.logo')
 const changeCard = document.querySelector('.change-card')
 const cardsList = document.querySelectorAll('.card')
 const repoList = document.querySelector('.repo-list')
-
-let isFlipped = false
-let reposAreFetched = false
 
 changeCard.onclick = () => {
   isFlipped = !isFlipped
