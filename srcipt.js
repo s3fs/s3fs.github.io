@@ -32,10 +32,10 @@ changeCard.onclick = () => {
 
   const [front, back] = isFlipped ? [cardsList[0], cardsList[1]] : [cardsList[1], cardsList[0]]
 
-  front.classList.remove('card-active')
+  //front.classList.remove('card-active')
   front.classList.add('card-inactive')
   back.classList.remove('card-inactive')
-  back.classList.add('card-active')
+  //back.classList.add('card-active')
 
   card = document.querySelector('.card-active')
 }
