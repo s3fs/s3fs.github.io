@@ -23,11 +23,9 @@ changeCard.onclick = () => {
       repoList.innerHTML = ''
       res.map(r => {
         let el = document.createElement('a')
-        console.log(`el`, el)
         el.innerHTML = r.name
         el.href = `https://s3fs.github.io/${r.name}`
         repoList.appendChild(el)
-        console.log(`repoList`, repoList)
       })
     })
   }
