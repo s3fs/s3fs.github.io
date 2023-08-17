@@ -1,3 +1,52 @@
 {
-  "test": "value"
+  "name": "Nikolai L",
+  "type": "Senior Software Engineer, Web Developer",
+  "summary": "Senior Software Engineer with 5+ years of expertise in front-end & back-end web development,\nautomation and latest technologies. Passionate about delivering solutions that work. Open to new challenges in hardware, IoT, and embedded.",
+  "competencies": {
+    "expert": [
+      "ES6",
+      "Git",
+      "HTML5",
+      "TypeScript/TS",
+      "Jest",
+      "Node",
+      "NPM",
+      "React",
+      "Redux",
+      "JavaScript/JS",
+      "ESNext",
+      "Yarn",
+      "SCSS",
+      "TDD",
+      "Agile"
+    ],
+    "proficient": [
+      "Vue",
+      "Recoil",
+      "Storybook",
+      "Express",
+      "SQL",
+      "MongoDB",
+      "Webpack",
+      "CI/CD",
+      "Linux (& *nix)",
+      "bash",
+      "Security",
+      "UI/UX"
+    ],
+    "intermediate": [
+      "Python",
+      "Docker",
+      "Rollup",
+      "Rust",
+      "C",
+      "Azure",
+      "AWS",
+      "Jenkins",
+      "Microservices"
+    ]
+  },
+  "links": {
+    "github": "https://github.com/s3fs"
+  }
 }
