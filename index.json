@@ -1,52 +1,39 @@
 {
-  "name": "Nikolai L",
-  "type": "Senior Software Engineer, Web Developer",
-  "summary": "Senior Software Engineer with 5+ years of expertise in front-end & back-end web development,\nautomation and latest technologies. Passionate about delivering solutions that work. Open to new challenges in hardware, IoT, and embedded.",
+  "name": "Nikolai L.",
+  "type": "Senior Software Engineer",
+  "summary": "Senior Software Engineer with 5+ years of expertise in developing software of various complexity",
   "competencies": {
-    "expert": [
-      "ES6",
-      "Git",
-      "HTML5",
-      "TypeScript/TS",
-      "Jest",
-      "Node",
-      "NPM",
-      "React",
-      "Redux",
-      "JavaScript/JS",
-      "ESNext",
-      "Yarn",
-      "SCSS",
-      "TDD",
-      "Agile"
-    ],
-    "proficient": [
-      "Vue",
-      "Recoil",
-      "Storybook",
-      "Express",
-      "SQL",
-      "MongoDB",
-      "Webpack",
-      "CI/CD",
-      "Linux (& *nix)",
-      "bash",
+    "hard": [
+      "Web development: Front-end, Full-stack",
+      "Testing: Unit, E2E",
       "Security",
-      "UI/UX"
+      "CI/CD",
+      "Microservices",
+      "Microcontrollers, Embedded"
     ],
-    "intermediate": [
+    "soft": [
+      "Problem Solving",
+      "Team Leadership",
+      "Agile",
+      "User Experience (UX/UI)"
+    ],
+    "exact": [
+      "TypeScript",
+      "React",
+      "Vue",
+      "Node",
       "Python",
+      "bash",
+      "Linux (& *nix), Windows",
       "Docker",
-      "Rollup",
       "Rust",
       "C",
       "Azure",
-      "AWS",
-      "Jenkins",
-      "Microservices"
+      "AWS"
     ]
   },
   "links": {
-    "github": "https://github.com/s3fs"
+    "github": "https://github.com/s3fs",
+    "web": "https://s3fs.github.io"
   }
 }
