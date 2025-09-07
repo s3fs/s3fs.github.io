@@ -3,9 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>s3fs.github.io</title>  
-</head>
+    <title>s3fs.github.io</title>
+    <style>
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        body > * {
+            color: rgb(72, 72, 72);
+        }
+
+        .zal {
+            font-size: 3.5rem;
+            font-weight: bold;
+            animation: zal 2s steps(2, end) infinite;
+        }
+
+        .zal:hover {
+            padding: 1.5rem;
+            animation: none;
+        }
+
+        .zal:hover:before {
+            content: 'Say "';
+            font-size: 1.5rem;
+        }
+
+        .zal:hover:after {
+            content: '" back...';
+            font-size: 1.5rem;
+        }
+
+        @keyframes zal {
+            0%,
+            100% {
+                font-family: "Fontdiner Swanky", serif;
+            }
+            10% {
+                font-family: "Syne Mono", monospace;
+            }
+            20% {
+                font-family: "Darumadrop One", sans-serif;
+            }
+            30% {
+                font-family: "Swanky and Moo Moo", cursive;
+                transform: rotate(2deg);
+            }
+            40% {
+                font-family: "Special Elite", system-ui;
+            }
+            60% {
+                font-family: "ZCOOL KuaiLe", sans-serif;
+            }
+            90% {
+                font-family: "Barrio", system-ui;
+                transform: rotate(-1deg);
+            }
+        }
+
+        @media (prefers-color-scheme: dark) {
+            body, body > * {
+                background-color: rgb(34, 34, 34);
+                color: rgb(200, 200, 200);
+            }
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barrio&family=Fontdiner+Swanky&family=Darumadrop+One&family=Special+Elite&family=Swanky+and+Moo+Moo&family=Syne+Mono&family=ZCOOL+KuaiLe&display=swap"
+        rel="stylesheet">
 <body>
-    <a href="https://github.com/s3fs">Hello!</a>
+    <a href="https://github.com/s3fs" class="zal">Hello!</a>
 </body>
 </html>
