@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
-
-<svg
+<!-- Made by s3fs (https://s3fs.github.io/) --><svg
    width="480mm"
    height="480mm"
    version="1.1"
@@ -25,15 +23,15 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
-     inkscape:zoom="0.13251595"
-     inkscape:cx="1147.0318"
-     inkscape:cy="781.03808"
+     inkscape:zoom="0.18577552"
+     inkscape:cx="1151.9279"
+     inkscape:cy="1106.1737"
      inkscape:window-width="1147"
      inkscape:window-height="634"
      inkscape:window-x="0"
      inkscape:window-y="30"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g13" />
+     inkscape:current-layer="g10" />
   <g
      fill="#ffd42a"
      id="g10">
@@ -47,8 +45,10 @@
        d="m218.9 237.91c0.58316 11.311-8.4291 61.91-12.73 89.15-1.7731 36.132-5.9582 71.971-10.374 107.72 30.898-10.062 95.02 26.115 65.652-28.13-15.701-41.729-11.247-86.473-17.918-129.4-7.2498-16.355 8.3656-58.779-24.63-39.341z"
        id="path3" />
     <path
-       d="m180.07 189.56c-28.68 6.9659-59.152-12.36-82.017-12.142 13.015 24.961-11.223 85.927 32.479 51.251 29.699-6.4645 62.357 2.7564 49.538-39.109z"
-       id="path4" />
+       d="m 195.10595,190.58138 c -22.57455,5.48298 -46.55961,-9.72879 -64.55707,-9.55719 5.67281,64.28695 -9.10274,60.37403 25.56481,40.34059 23.37662,-5.08832 49.08233,2.16961 38.99226,-30.7834 z"
+       id="path4"
+       sodipodi:nodetypes="cccc"
+       style="stroke-width:0.787118" />
     <path
        d="m264.8 185.65c1.4614-0.64639 37.036 2.4098 58.664-5.2146 30.987 0.16916 62.755-14.044 95.166-13.036 12.008 0.38551-0.58221 65.973 6.5182 62.575-32.556-2.5508-63.61-19.448-97.773-15.644-22.939-5.3014-94.693 16.158-62.575-28.68z"
        id="path5" />

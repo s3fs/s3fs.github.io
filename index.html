@@ -21,7 +21,7 @@
             justify-content: center;
             align-items: center;
             box-sizing: border-box;
-            padding: 0 6rem;
+            padding: 0 8rem;
             background-color: #ededed;
         }
 
@@ -43,11 +43,13 @@
             display: flex;
             align-items: center;
             padding-bottom: 0.5rem;
+            gap: 1rem;
         }
 
         .links {
             z-index: 900;
             margin-left: auto;
+            text-align: end;
         }
 
         .mov {
@@ -63,7 +65,7 @@
             gap: 1rem;
             max-width: 40rem;
             min-width: 10rem;
-            padding-bottom: 5rem;
+            padding-bottom: 4rem;
             background-color: #dbdada;
             border-radius: 1rem;
         }
@@ -140,19 +142,19 @@
 
         .c1 {
             width: 12rem;
-            right: -3rem;
+            right: -5rem;
             bottom: -4rem;
         }
 
         .c2 {
-            right: 6rem;
+            right: 4rem;
             width: 5rem;
-            bottom: -4rem;
+            bottom: -3.5rem;
         }
 
         .c3 {
             width: 4rem;
-            right: 10rem;
+            right: 8rem;
             bottom: -1rem;
         }
 
@@ -172,7 +174,7 @@
             width: 5rem;
             left: 46%;
             bottom: -5rem;
-            z-index: 8;
+            z-index: 10;
         }
 
         .s2 {
@@ -248,6 +250,19 @@
             left: 20%;
         }
 
+        .rd {
+            right: -10%;
+            height: 5rem;
+            bottom: -4rem;
+        }
+
+        .pm {
+            z-index: 901;
+            right: 2%;
+            bottom: 2rem;
+            width: 18rem;
+        }
+
         @media screen and (max-width: 520px) {
             .f2, .f6 {
                 visibility: hidden;
@@ -260,6 +275,12 @@
             .f5 {
                 right: 10%;
             }
+        }
+
+        .cta {
+            position: absolute;
+            bottom: 1rem;
+            right: 1rem;
         }
 
         /*@media (prefers-color-scheme: dark) {
@@ -283,6 +304,7 @@
             <img class="c3 mov" src="assets/c2.svg" />
             <img class="bir1 mov" src="assets/bir.svg" />
             <img class="bir2 mov" src="assets/bir.svg" />
+            <img class="rd mov" src="assets/rd.svg" />
         </div>
         <section class="card">
             <section>
@@ -293,9 +315,7 @@
                         <a href="https://linkedin.com/in/nikklaas">Linkedin</a>
                     </section>
                 </header>
-                <p>Senior Software Engineer with 7+ years of experience in full-stack web development. Experience in all stages of software
-                    lifecycle, from inception to deployment. Track record of team leadership within teams of different sizes. Passionate about
-                    building scalable, high-performance solutions. Open source contributor. Professional tinkerer.</p>
+                <p>Senior Software Engineer with 7+ years of experience in full-stack web development. Experience in all stages of software lifecycle, from inception to deployment. Track record of team leadership within teams of different sizes. Passionate about building scalable, high-performance solutions. Open source contributor. Professional tinkerer.</p>
             </section>
         </section>
         <div class="img-container">
@@ -321,6 +341,7 @@
             <img class="df1 mov" src="assets/df1.svg" />
         </div>
     </div>
+    <!-- <button class="cta" onclick="requestPermission()">Make interactive...</button> -->
 </body>
 <script>
     const fn = ({ clientX, clientY }) => {
@@ -337,5 +358,25 @@
     }
 
     window.addEventListener('mousemove', fn)
+
+    function requestPermission() {
+        DeviceOrientationEvent.requestPermission().then((orientationPermission) => {
+            if (
+                orientationPermission === "granted"
+            ) {
+                // window.addEventListener("devicemotion", (ev) => document.body.textContent += JSON.stringify(ev));
+                // window.addEventListener("deviceorientation", (ev) => document.body.textContent += JSON.stringify(ev));
+            }
+        });
+    }
+
+    if (typeof DeviceMotionEvent.requestPermission === "function") {
+        const spidey = document.querySelector(".s1")
+    } else {
+        const spidey = document.querySelector(".s1")
+
+        // window.addEventListener("devicemotion", (ev) => document.body.textContent += JSON.stringify(ev));
+        // window.addEventListener("deviceorientation", (ev) => document.body.textContent += JSON.stringify(ev));
+    }
 </script>
 </html>
