@@ -12,6 +12,7 @@
             margin: 0;
             padding: 0;
             font-family: Arial, Helvetica, sans-serif;
+            font-size: 12px;
         }
 
         body {
@@ -19,66 +20,254 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            box-sizing: border-box;
+            padding: 0 6rem;
+            background-color: #ededed;
         }
 
         body > * {
             color: rgb(72, 72, 72);
+            font-family: monospace;
         }
 
-        .zal {
-            font-size: 3.5rem;
-            font-weight: bold;
-            animation: zal 2s steps(2, end) infinite;
+        h4, p {
+            padding: 0;
+            margin: 0;
         }
 
-        .zal:hover {
+        h4 {
+            font-size: 2rem;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            padding-bottom: 0.5rem;
+        }
+
+        .links {
+            z-index: 900;
+            margin-left: auto;
+        }
+
+        .mov {
+            position: absolute;
+            filter: drop-shadow(0 0 0.3rem rgba(102, 102, 102, 0.4));
+        }
+
+        .card {
             padding: 1.5rem;
-            animation: none;
+            box-shadow: 0rem 0rem 10rem 2rem #b8e1ef;
+            display: flex;
+            flex-direction: row;
+            gap: 1rem;
+            max-width: 40rem;
+            min-width: 10rem;
+            padding-bottom: 5rem;
+            background-color: #dbdada;
+            border-radius: 1rem;
         }
 
-        .zal:hover:before {
-            content: 'Say "';
-            font-size: 1.5rem;
+        .container {
+            display: flex;
+            flex-direction: column;
         }
 
-        .zal:hover:after {
-            content: '" back...';
-            font-size: 1.5rem;
+        .img-container {
+            position: relative;
         }
 
-        @keyframes zal {
-            0%,
-            100% {
-                font-family: "Fontdiner Swanky", serif;
+        .f {
+            height: 12rem;
+            z-index: 10;
+        }
+
+        .f1 {
+            left: -7rem;
+            bottom: -5rem;
+        }
+
+        .f2 {
+            height: 7rem;
+            left: 30%;
+            bottom: -7rem;
+            z-index: 9;
+        }
+
+        .f3 {
+            left: 0.5rem;
+            bottom: -8rem;
+            z-index: 8;
+        }
+
+        .f4 {
+            height: 15rem;
+            right: -7rem;
+            bottom: -7rem;
+            z-index: 7;
+        }
+
+        .f5 {
+            height: 7rem;
+            right: 30%;
+            bottom: -7rem;
+            z-index: 9;
+        }
+
+        .f6 {
+            height: 7rem;
+            right: 14%;
+            bottom: -6rem;
+            z-index: 8;
+        }
+
+        .m1 {
+            z-index: 2;
+            left: -1rem;
+        }
+
+        .m2 {
+            z-index: 2;
+            right: -1rem;
+        }
+
+        .su {
+            width: 18rem;
+            left: -9rem;
+            top: -8rem;
+            z-index: 1;
+        }
+
+        .c1 {
+            width: 12rem;
+            right: -3rem;
+            bottom: -4rem;
+        }
+
+        .c2 {
+            right: 6rem;
+            width: 5rem;
+            bottom: -4rem;
+        }
+
+        .c3 {
+            width: 4rem;
+            right: 10rem;
+            bottom: -1rem;
+        }
+
+        .bir1 {
+            width: 8rem;
+            left: 45%;
+            bottom: -4rem;
+        }
+
+        .bir2 {
+            width: 6rem;
+            left: 35%;
+            bottom: -2rem;
+        }
+
+        .s1 {
+            width: 5rem;
+            left: 46%;
+            bottom: -5rem;
+            z-index: 8;
+        }
+
+        .s2 {
+            width: 3rem;
+            right: 3%;
+            bottom: -5rem;
+            z-index: 5;
+        }
+
+        .s3 {
+            width: 4rem;
+            left: -4%;
+            bottom: -5rem;
+            z-index: 6;
+        }
+
+        .b1 {
+            width: 5rem;
+            left: 60%;
+            bottom: -1rem;
+            z-index: 8;
+        }
+
+        .b2 {
+            width: 3.5rem;
+            left: 55%;
+            bottom: 1rem;
+            z-index: 7;
+        }
+
+        .df1 {
+            width: 8rem;
+            left: 24%;
+            bottom: -3rem;
+            z-index: 5;
+        }
+
+        .g {
+            width: 17rem;
+            bottom: -4rem;
+            z-index: 5;
+        }
+
+        .g1 {
+            left: -1rem;
+        }
+
+        .g2 {
+            right: -1rem;
+        }
+
+        .g3 {
+            right: 20%;
+        }
+
+        .g4 {
+            left: 20%;
+        }
+
+        .m {
+            width: 16rem;
+            bottom: -4rem;
+            filter: none;
+        }
+
+        .m3 {
+            z-index: 1;
+            right: 20%;
+        }
+
+        .m4 {
+            z-index: 1;
+            left: 20%;
+        }
+
+        @media screen and (max-width: 520px) {
+            .f2, .f6 {
+                visibility: hidden;
             }
-            10% {
-                font-family: "Syne Mono", monospace;
+
+            .df1 {
+                left: 19%;
             }
-            20% {
-                font-family: "Darumadrop One", sans-serif;
-            }
-            30% {
-                font-family: "Swanky and Moo Moo", cursive;
-                transform: rotate(2deg);
-            }
-            40% {
-                font-family: "Special Elite", system-ui;
-            }
-            60% {
-                font-family: "ZCOOL KuaiLe", sans-serif;
-            }
-            90% {
-                font-family: "Barrio", system-ui;
-                transform: rotate(-1deg);
+
+            .f5 {
+                right: 10%;
             }
         }
 
-        @media (prefers-color-scheme: dark) {
+        /*@media (prefers-color-scheme: dark) {
             body, body > * {
                 background-color: rgb(34, 34, 34);
                 color: rgb(200, 200, 200);
             }
-        }
+        }*/
     </style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -86,6 +275,67 @@
         href="https://fonts.googleapis.com/css2?family=Barrio&family=Fontdiner+Swanky&family=Darumadrop+One&family=Special+Elite&family=Swanky+and+Moo+Moo&family=Syne+Mono&family=ZCOOL+KuaiLe&display=swap"
         rel="stylesheet">
 <body>
-    <a href="https://github.com/s3fs" class="zal">Hello!</a>
+    <div class="container">
+        <div class="img-container">
+            <img class="su mov" src="assets/sun.svg" />
+            <img class="c1 mov" src="assets/c1.svg" />
+            <img class="c2 mov" src="assets/c2.svg" />
+            <img class="c3 mov" src="assets/c2.svg" />
+            <img class="bir1 mov" src="assets/bir.svg" />
+            <img class="bir2 mov" src="assets/bir.svg" />
+        </div>
+        <section class="card">
+            <section>
+                <header>
+                    <h4>Nick Pavlov</h4>
+                    <section class="links">
+                        <a href="https://github.com/s3fs">GitHub</a>
+                        <a href="https://linkedin.com/in/nikklaas">Linkedin</a>
+                    </section>
+                </header>
+                <p>Senior Software Engineer with 7+ years of experience in full-stack web development. Experience in all stages of software
+                    lifecycle, from inception to deployment. Track record of team leadership within teams of different sizes. Passionate about
+                    building scalable, high-performance solutions. Open source contributor. Professional tinkerer.</p>
+            </section>
+        </section>
+        <div class="img-container">
+            <img class="f1 f mov" src="assets/f1.svg" />
+            <img class="f2 f mov" src="assets/f2.svg" />
+            <img class="f3 f mov" src="assets/f3.svg" />
+            <img class="f4 f mov" src="assets/f4.svg" />
+            <img class="f5 f mov" src="assets/f5.svg" />
+            <img class="f6 f mov" src="assets/f1.svg" />
+            <img class="m1 m mov" src="assets/m1.svg" />
+            <img class="m2 m mov" src="assets/m2.svg" />
+            <img class="m3 m mov" src="assets/m3.svg" />
+            <img class="m4 m mov" src="assets/m4.svg" />
+            <img class="g1 g mov" src="assets/g1.svg" />
+            <img class="g2 g mov" src="assets/g1.svg" />
+            <img class="g3 g mov" src="assets/g1.svg" />
+            <img class="g4 g mov" src="assets/g1.svg" />
+            <img class="s1 mov" src="assets/s1.svg" />
+            <img class="s2 mov" src="assets/s1.svg" />
+            <img class="s3 mov" src="assets/s1.svg" />
+            <img class="b1 mov" src="assets/b1.svg" />
+            <img class="b2 mov" style="transform: scaleX(-1);" src="assets/b1.svg" />
+            <img class="df1 mov" src="assets/df1.svg" />
+        </div>
+    </div>
 </body>
+<script>
+    const fn = ({ clientX, clientY }) => {
+        const targets = document.querySelectorAll(".mov")
+        const x = clientX - (window.innerWidth / 2)
+        const y = clientY - (window.innerHeight / 2)
+        for (const point of targets) {
+            const self = point.getBoundingClientRect();
+
+            const z = window.getComputedStyle(point).getPropertyValue('z-index');
+            const coeff = Math.abs(150 - (z === 'auto' ? 0 : z * 10));
+            point.style.transform = `translate3d(${x/coeff}px,${y/coeff}px,${0}px) ${point.style.transform.includes('scaleX') ? 'scaleX(-1)' : ''}`;
+        }
+    }
+
+    window.addEventListener('mousemove', fn)
+</script>
 </html>
