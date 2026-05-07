@@ -345,6 +345,12 @@
         .zzyzx {
             visibility: hidden;
         }
+
+        .dbg {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
     </style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -400,12 +406,17 @@
     <img class="pm ct zzyzx" onclick="requestPermission()" src="assets/pm.svg" />
     <img class="s0 ct zzyzx" onclick="requestPermission()" src="assets/s1.svg" />
     <img class="sw zzyzx" onclick="requestPermission()" src="assets/sw.svg" />
+    <span class="dbg"></span>
 </body>
 <script>
     const fn = ({ clientX, clientY }) => {
         const targets = document.querySelectorAll(".mov")
         const x = clientX - (window.innerWidth / 2)
         const y = clientY - (window.innerHeight / 2)
+        
+        if (window.location.search.includes('dbg')) {
+            document.querySelector(".dbg").innerHTML = `${clientX}, ${clientY}`
+        }
 
         for (const point of targets) {
             const self = point.getBoundingClientRect();
