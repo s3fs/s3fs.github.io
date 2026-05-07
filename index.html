@@ -434,7 +434,7 @@
         // alpha 0-360
         // beta -180-180 - x
         // gamma -90-90 - y
-        fn({ clientY: Math.abs((beta * COEFF / 3) + (window.innerWidth / 2)), clientX: Math.abs((gamma * COEFF / 3) + (window.innerHeight / 2))});
+        fn({ clientY: (beta * COEFF / 4) + (window.innerWidth / 2), clientX: (gamma * COEFF / 4) + (window.innerHeight / 2)});
     }
 
     try {
