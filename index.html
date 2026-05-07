@@ -409,6 +409,7 @@
     <span class="dbg"></span>
 </body>
 <script>
+    const COEFF = 150;
     const fn = ({ clientX, clientY }) => {
         const targets = document.querySelectorAll(".mov")
         const x = clientX - (window.innerWidth / 2)
@@ -422,7 +423,7 @@
             const self = point.getBoundingClientRect();
 
             const z = window.getComputedStyle(point).getPropertyValue('z-index');
-            const coeff = Math.abs(150 - (z === 'auto' ? 0 : z * 10));
+            const coeff = Math.abs(COEFF - (z === 'auto' ? 0 : z * 10));
             point.style.transform = `translate3d(${x/coeff}px,${y/coeff}px,${0}px) ${point.style.transform.includes('scaleX') ? 'scaleX(-1)' : ''}`;
         }
     }
@@ -433,7 +434,7 @@
         // alpha 0-360
         // beta -180-180 - x
         // gamma -90-90 - y
-        fn({ clientX: beta + (window.innerWidth / 2), clientY: gamma + (window.innerHeight / 2)})
+        fn({ clientX: (beta * COEFF) + (window.innerWidth / 2), clientY: (gamma * COEFF) + (window.innerHeight / 2)})
     }
 
     try {
