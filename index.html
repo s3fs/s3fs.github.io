@@ -36,7 +36,7 @@
         }
 
         h4 {
-            font-size: 2rem;
+            font-size: 1.6rem;
         }
 
         header {
@@ -256,13 +256,6 @@
             bottom: -4rem;
         }
 
-        .pm {
-            z-index: 901;
-            right: 2%;
-            bottom: 2rem;
-            width: 18rem;
-        }
-
         @media screen and (max-width: 520px) {
             .f2, .f6 {
                 visibility: hidden;
@@ -283,6 +276,58 @@
             right: 1rem;
         }
 
+        .ct {
+            position: absolute;
+            filter: drop-shadow(0 0 0.2rem rgba(102, 102, 102, 1));
+        }
+
+        .pm {
+            height: 7rem;
+            right: 2.5rem;
+            bottom: 1rem;
+            z-index: 901;
+        }
+
+        .sw {
+            position: absolute;
+            height: 8rem;
+            right: 0;
+            bottom: 0;
+            z-index: 900;
+        }
+
+        .s0 {
+            height: 5rem;
+            right: 0;
+            bottom: 0;
+            z-index: 901;
+            animation: jump 2s infinite;
+        }
+
+        .about {
+            text-align: justify;
+            font-size: 0.9rem;
+        }
+
+        /*
+        @keyframes jump {
+            0% {
+                transform: translateY(0);
+            }
+            10% {
+                transform: translateY(0.5rem);
+            }
+            15% {
+                transform: translateY(0);
+            }
+            30% {
+                transform: translateY(0.5rem);
+            }
+            40% {
+                transform: translateY(0);
+            }
+        }
+        */
         /*@media (prefers-color-scheme: dark) {
             body, body > * {
                 background-color: rgb(34, 34, 34);
@@ -315,7 +360,7 @@
                         <a href="https://linkedin.com/in/nikklaas">Linkedin</a>
                     </section>
                 </header>
-                <p>Senior Software Engineer with 7+ years of experience in full-stack web development. Experience in all stages of software lifecycle, from inception to deployment. Track record of team leadership within teams of different sizes. Passionate about building scalable, high-performance solutions. Open source contributor. Professional tinkerer.</p>
+                <p class="about">Senior Software Engineer with 7+ years of experience in full-stack web development. Proficiency in all stages of software lifecycle, from inception to deployment. Track record of team leadership within teams of different sizes. Passionate about building scalable, high-performance solutions. Open source contributor. Professional tinkerer.</p>
             </section>
         </section>
         <div class="img-container">
@@ -341,7 +386,9 @@
             <img class="df1 mov" src="assets/df1.svg" />
         </div>
     </div>
-    <!-- <button class="cta" onclick="requestPermission()">Make interactive...</button> -->
+    <img class="pm ct" onclick="requestPermission()" src="assets/pm.svg" />
+    <img class="s0 ct" onclick="requestPermission()" src="assets/s1.svg" />
+    <img class="sw" onclick="requestPermission()" src="assets/sw.svg" />
 </body>
 <script>
     const fn = ({ clientX, clientY }) => {
