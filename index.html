@@ -410,21 +410,24 @@
 </body>
 <script>
     const COEFF = 150;
+    const CUTOFF = 1500;
     const fn = ({ clientX, clientY }) => {
         const targets = document.querySelectorAll(".mov")
         const x = clientX - (window.innerWidth / 2)
         const y = clientY - (window.innerHeight / 2)
         
         if (window.location.search.includes('dbg')) {
-            document.querySelector(".dbg").innerHTML = `${clientX}, ${clientY}`
+            document.querySelector(".dbg").innerHTML = `${Math.floor(clientX)}, ${Math.floor(clientY)}`
         }
 
         for (const point of targets) {
-            const self = point.getBoundingClientRect();
-
             const z = window.getComputedStyle(point).getPropertyValue('z-index');
             const coeff = Math.abs(COEFF - (z === 'auto' ? 0 : z * 10));
-            point.style.transform = `translate3d(${x/coeff}px,${y/coeff}px,${0}px) ${point.style.transform.includes('scaleX') ? 'scaleX(-1)' : ''}`;
+            const adjustedX = x/coeff;
+            const adjustedY = y/coeff;
+            const clampedX = adjustedX < 0 ? Math.max(-CUTOFF, adjustedX) : Math.min(CUTOFF, adjustedX);
+            const clampedY = adjustedY < 0 ? Math.max(-CUTOFF, adjustedY) : Math.min(CUTOFF, adjustedY);
+            point.style.transform = `translate3d(${clampedX}px,${clampedY}px,${0}px) ${point.style.transform.includes('scaleX') ? 'scaleX(-1)' : ''}`;
         }
     }
 
@@ -444,6 +447,7 @@
             .then(perm => {
                 if (perm === "granted") {
                     window.addEventListener("deviceorientation", orientationToMovement);
+                    document.querySelectorAll(".zzyzx").forEach(t => t.style.visibility = "hidden")
                 }
             })
             .catch((e) => {
